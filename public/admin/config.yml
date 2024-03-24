@@ -2,6 +2,10 @@ backend:
   name: github
   branch: main
   repo: jasongannon/aws
+  site_domain: https://stratosphere.netlify.app
+  base_url: https://stratosphere.netlify.app
+  auth_endpoint: oauth
+  automatic_deployments: true
   commit_messages:
     create: Create {{collection}} “{{slug}}”
     update: Update {{collection}} “{{slug}}”
@@ -10,13 +14,15 @@ backend:
     deleteMedia: Delete “{{path}}”
     openAuthoring: '{{message}}'
 
+media_folder: "public/images/blog" 
+public_folder: "/images/blog"
+
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/content/blog" # The path to the folder where the documents are stored
+  - name: "blog" 
+    label: "Blog" 
+    folder: "src/content/blog"  
     create: true # Allow users to create new documents in this collection
     fields: # The fields for each document, usually in frontmatter
-      - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Description", name: "description", widget: "text"}
       - { label: "Publish Date", name: "pubDate", widget: "datetime" }
@@ -24,8 +30,4 @@ collections:
       - { label: "Hero Image", name: "heroImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
 
-media_folder: "/" # Location where files will be stored in the repo
-public_folder: "/" # The src attribute for uploaded media
-
 site_url: https://stratosphere.netlify.app # URL to the site where the content will be displayed
-
