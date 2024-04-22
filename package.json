@@ -1,14 +1,18 @@
 {
-  "name": "aws",
-  "type": "module",
+  "name": "stratosphere",
   "version": "0.0.1",
+  "description": "This is a web application dedicated to the life and achievements of Albert W. Stevens, a pioneer in aerial photography and high-altitude exploration.",
+  "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": ["balloon", "high-altitude", "exploration", "aerial", "photography", "Albert W. Stevens", "Stratosphere"],
+  "author": "Jason Gannon",
+  "license": "ISC",
   "dependencies": {
     "@astrojs/alpinejs": "^0.4.0",
     "@astrojs/check": "^0.5.10",
